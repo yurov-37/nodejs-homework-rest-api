@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 const { contacts: ctrl } = require("../../controllers");
-const { ctrlWrapper } = require("../../middlewares");
-const { addContactValidation } = require("../../middlewares/validation");
+const { ctrlWrapper, addContactValidation } = require("../../middlewares");
+// const {  } = require("../../middlewares");
 
 router.get("/", ctrlWrapper(ctrl.getAllContacts));
 
