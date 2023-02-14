@@ -3,7 +3,6 @@ const router = express.Router();
 
 const { contacts: ctrl } = require("../../controllers");
 const { ctrlWrapper, addContactValidation } = require("../../middlewares");
-// const {  } = require("../../middlewares");
 
 router.get("/", ctrlWrapper(ctrl.getAllContacts));
 
