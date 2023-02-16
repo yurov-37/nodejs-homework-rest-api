@@ -2,9 +2,9 @@ const createError = require("http-errors");
 const { Contact } = require("../../models");
 
 const uptadeContactById = async (req, res) => {
-  // if (!req.body) {
-  //   throw createError(400, "missing fields"); //  dont work????
-  // }
+  if (Object.keys(req.body).length === 0) {
+    throw createError(400, "missing fields");
+  }
   const { contactId } = req.params;
   const updatedСontact = await Contact.findByIdAndUpdate(contactId, req.body, {
     new: true,
