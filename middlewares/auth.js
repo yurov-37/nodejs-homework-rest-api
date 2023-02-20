@@ -1,15 +1,16 @@
-/* Извлеает токен из заголовка и:
-1. Провеяряет валидность токена (то есть что мы его выдали и он не истек).
-2. Извлекает из токена id , находит пользователя в базе по id и прикрепляет его к запросу (req.user).
+/*
+Extracts the token from the header and:
+1. Verifies the validity of the token (that is, that we issued it and it has not expired).
+2. Extracts id from the token, finds the user in the database by id and attaches it to the request (req.user).
 */
 
-/*  
-1. Извлечь из заголовкоа запроса содеоржимое заголовка Autorization.
-2. Разделить его на 2 слова: bearer и токен.
-3. Проверить равно ли первое слово "Bearer.
-4. Проверить валидность второго слова (токена).
-5. Если токен валиден - извлечь из него id и найти пользователя в базе с таким id.
-6. Если пользователя с таким id мы нашли в базе - его нужно прикрепить к запросу (объект req)
+/*
+1. Extract the contents of the Authorization header from the request header.
+2. Divide it into 2 words: bearer and token.
+3. Check if the first word is "Bearer.
+4. Check the validity of the second word (token).
+5. If the token is valid, extract the id from it and find the user in the database with that id.
+6. If we found a user with this id in the database, we need to attach it to the request (req object)
 
 */
 
