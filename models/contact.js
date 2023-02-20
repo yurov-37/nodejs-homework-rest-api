@@ -47,11 +47,3 @@ const contactSchemas = { addContactsSchema, updateFavoriteSchema };
 const Contact = model("contact", contactSchema);
 
 module.exports = { Contact, contactSchemas };
-
-// const handleErrors = (error, data, next) => {
-//   const { name, code } = error;
-//   console.log(name);
-//   console.log(code);
-// };
-
-// contactSchema.post("save", handleErrors);
