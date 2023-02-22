@@ -32,7 +32,6 @@ router.patch(
   "/avatars",
   auth,
   upload.single("avatar"),
-  // validation(userSchemas.joiUpdateSubscriptionSchema),
   ctrlWrapper(ctrl.updateAvatar)
 );
 

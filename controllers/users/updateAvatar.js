@@ -1,6 +1,6 @@
 const { User } = require("../../models");
 const path = require("path");
-const fs = require("fs").promises;
+const fs = require("fs/promises");
 const jimp = require("jimp");
 
 const updateAvatar = async (req, res) => {
