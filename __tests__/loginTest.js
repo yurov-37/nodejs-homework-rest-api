@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const request = require("supertest");
 const app = require("../app");
+const { User } = require("../models");
 require("dotenv").config();
 const { DB_HOST } = process.env;
 mongoose.set("strictQuery", false);
