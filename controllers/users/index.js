@@ -4,7 +4,7 @@ const getCurrent = require("./getCurrent");
 const logout = require("./logout");
 const updateSubscription = require("./updateSubscription");
 const updateAvatar = require("./updateAvatar");
-const verifyEmail = require("./verifyEmail");
+const verifyEmail = require("./verifyEmail.js");
 const resendVerifyEmail = require("./resendVerifyEmail.js");
 
 module.exports = {

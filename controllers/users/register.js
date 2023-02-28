@@ -24,13 +24,13 @@ const register = async (req, res) => {
   const mail = {
     to: email,
     subject: "website registration confirmation",
-    html: `<a href="http://localhost:3000//api/users/verify/${verificationToken}" target="_blank">Click to confirm email</a>`,
+    html: `<a href="http://localhost:3000/api/users/verify/${verificationToken}" target="_blank">Click to confirm email</a>`,
   };
 
   await sendEmail(mail);
-  res
-    .status(201)
-    .json({ user: { email, subscription: newUser.subscription, avatarURL } });
+  res.status(201).json({
+    user: { email, subscription: newUser.subscription, avatarURL, mail },
+  });
 };
 
 module.exports = register;
